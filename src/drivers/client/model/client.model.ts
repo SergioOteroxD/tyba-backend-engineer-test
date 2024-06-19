@@ -27,7 +27,7 @@ export class Clients implements Iclient {
   password: string;
 
   @Column('character varying', { name: 'status', length: 20, default: () => `'ACTIVE'` })
-  status: EstatusClient;
+  status?: EstatusClient;
 
   @Column('json', { name: 'location', nullable: true })
   location?: object;
@@ -43,11 +43,11 @@ export class Clients implements Iclient {
     name: 'createdAt',
     default: () => 'CURRENT_TIMESTAMP',
   })
-  createdAt: Date;
+  createdAt?: Date;
 
   @Column('timestamp without time zone', {
     name: 'updateAt',
     default: () => 'CURRENT_TIMESTAMP',
   })
-  updateAt: Date;
+  updateAt?: Date;
 }

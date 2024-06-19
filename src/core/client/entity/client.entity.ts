@@ -10,7 +10,7 @@ export interface Iclient {
 
   password: string;
 
-  status: EstatusClient;
+  status?: EstatusClient;
 
   location?: object;
 
